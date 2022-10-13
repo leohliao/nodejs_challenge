@@ -18,14 +18,14 @@ const initialize = async (head) => {
     // Helper method for recursive call 
     const countNodes = async (id) => {
         let nodes  = await getNodes(id);
+        // Save the Node Id to the unique object or increment the count
+        if (unique[id]) {
+            unique[id] += 1;
+        } else {
+            unique[id] = 1;
+        }
         await Promise.all(
             nodes.map(async (node) => {
-                // Save the Node Id to the unique object or increment the count
-                if (unique[node.id]) {
-                    unique[node.id] += 1;
-                } else {
-                    unique[node.id] = 1;
-                }
                 // Run recursive call on each of the ids inside the child_node_ids
                 if (node.child_node_ids.length > 0) {
                     for (let childNode of node.child_node_ids) {
