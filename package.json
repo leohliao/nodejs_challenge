@@ -1,0 +1,23 @@
+{
+  "name": "nodejs_challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leohliao/nodejs_challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leohliao/nodejs_challenge/issues"
+  },
+  "homepage": "https://github.com/leohliao/nodejs_challenge#readme",
+  "dependencies": {
+    "axios": "^1.1.2"
+  }
+}
